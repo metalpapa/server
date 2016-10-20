@@ -24,6 +24,6 @@
                
                new DAO_Juego(partida_id,jugador_id).ingresar();
                 
-               System.out.println("holi");
+               
      
         %>
