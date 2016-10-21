@@ -24,12 +24,13 @@ public class DAO_Partida {
     public void ingresar(){
         Connection con=new Conexion().getConnection(); 
         String insertString1 = "insert into partida(partida_id, nivel)values("+partida.getPartida_id()+",'"+partida.getNivel()+"')";
+        System.out.println(insertString1);
         try {
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(insertString1);
                 stmt.close();
                 con.close();
-           System.out.println(insertString1);
+           
         } catch(SQLException ex) {
                 System.err.println("SQLException: " + ex.getMessage());
         }

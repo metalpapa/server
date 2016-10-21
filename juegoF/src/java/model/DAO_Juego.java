@@ -26,12 +26,13 @@ public class DAO_Juego {
     public void ingresar(){
         Connection con=new Conexion().getConnection(); 
         String insertString1 = "insert into juego(partida_id,jugador_id) values("+partida_id+","+jugador_id+")";
+        System.out.println(insertString1);
         try {
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(insertString1);
                 stmt.close();
 		con.close();
-          System.out.println(insertString1);
+          
         } catch(SQLException ex) {
                 System.err.println("SQLException_inserts: " + ex.getMessage());
         }

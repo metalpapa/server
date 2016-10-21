@@ -25,12 +25,13 @@ public class DAO_Borrar_Figura {
     public void borrar(){
         Connection con=new Conexion().getConnection(); 
         String insertString1 = "delete from movimientos where partida_id="+partida_id+" and figura_id="+figura_id;
+        System.out.println(insertString1);
         try {
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(insertString1);
                 stmt.close();
 		con.close();
-          System.out.println(insertString1);
+          
         } catch(SQLException ex) {
                 System.err.println("SQLException_inserts: " + ex.getMessage());
         }
