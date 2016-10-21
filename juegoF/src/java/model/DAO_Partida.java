@@ -39,12 +39,13 @@ public class DAO_Partida {
     public void actualizar(){
         Connection con=new Conexion().getConnection(); 
         String insertString1 = "UPDATE partida SET duracion="+partida.getDuracion()+",terminada="+partida.getTerminada() +",completa="+partida.getCompletada()+" WHERE partida_id="+partida.getPartida_id();
+        System.out.println(insertString1);
         try {
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(insertString1);
                 stmt.close();
                 con.close();
-           System.out.println(insertString1);
+          
         } catch(SQLException ex) {
                 System.err.println("SQLException_update_DAO_Partida" + ex.getMessage());
         }
