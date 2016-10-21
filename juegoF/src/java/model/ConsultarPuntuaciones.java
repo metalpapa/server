@@ -50,7 +50,7 @@ public class ConsultarPuntuaciones {
     return Dbase ;
     }
     
-    public static String plength(String txt, int length){
+    public String plength(String txt, int length){
         if (txt.length()< length){
             while(true){
                 txt+=".";
