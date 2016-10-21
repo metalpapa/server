@@ -33,7 +33,7 @@ public class DAO_Borrar_Figura {
 		con.close();
           
         } catch(SQLException ex) {
-                System.err.println("SQLException_inserts: " + ex.getMessage());
+                System.err.println("SQLException_delete_DAO_Borrar_Figura: " + ex.getMessage());
         }
         
     }  

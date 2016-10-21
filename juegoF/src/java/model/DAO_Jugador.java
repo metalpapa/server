@@ -33,7 +33,7 @@ public class DAO_Jugador {
                 con.close();
            
         } catch(SQLException ex) {
-                System.err.println("SQLException_inserts: " + ex.getMessage());
+                System.err.println("SQLException_inserts_DAO_Jugador: " + ex.getMessage());
         }
     }     
     

@@ -32,7 +32,7 @@ public class DAO_Partida {
                 con.close();
            
         } catch(SQLException ex) {
-                System.err.println("SQLException: " + ex.getMessage());
+                System.err.println("SQLException_insert_DAO_Partida: " + ex.getMessage());
         }
     }    
 
@@ -46,7 +46,7 @@ public class DAO_Partida {
                 con.close();
            System.out.println(insertString1);
         } catch(SQLException ex) {
-                System.err.println("SQLException: " + ex.getMessage());
+                System.err.println("SQLException_update_DAO_Partida" + ex.getMessage());
         }
     } 
 }
