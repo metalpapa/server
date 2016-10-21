@@ -17,18 +17,22 @@ public class Vo_Partida {
     private String duracion;
     private String terminada;
     private String completada;
+    private String puntuacion;
     
 
     public Vo_Partida() {
     }
 
-    public Vo_Partida(String partida_id,String nivel, String duracion, String terminada, String completada) {
+    public Vo_Partida(String partida_id, String nivel, String duracion, String terminada, String completada, String puntuacion) {
         this.partida_id = partida_id;
-        this.nivel=nivel;
+        this.nivel = nivel;
         this.duracion = duracion;
         this.terminada = terminada;
         this.completada = completada;
+        this.puntuacion = puntuacion;
     }
+
+  
 
     public Vo_Partida(String partida_id, String nivel) {
         this.partida_id = partida_id;
@@ -37,6 +41,14 @@ public class Vo_Partida {
 
     public String getPartida_id() {
         return partida_id;
+    }
+
+    public void setPuntuacion(String puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+
+    public String getPuntuacion() {
+        return puntuacion;
     }
 
     public String getFecha() {

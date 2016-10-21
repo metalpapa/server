@@ -20,7 +20,7 @@
                String puntuacion=request.getParameter("puntuacion");
                String completada=request.getParameter("completada");
                
-               Vo_Partida partida=new Vo_Partida(partida_id, nivel,tiempo,"1",completada);
+               Vo_Partida partida=new Vo_Partida(partida_id, nivel,tiempo,"1",completada,puntuacion);
                new DAO_Partida(partida).actualizar();
                
                //System.out.println(completada);

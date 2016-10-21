@@ -32,11 +32,12 @@ public class ConsultarPuntuaciones {
                     while (rs.next()) {
                         if (Dbase.isEmpty()){
                             Dbase.add("{");
-                            Dbase.add("\"jugador_id\":"+rs.getString("jugador_id")+",\"duracion\":"+rs.getString("duracion")+",\"puntuacion\":"+rs.getString("puntuacion")+",\"apodo\":\""+rs.getString("apodo")+"\"");
+                            Dbase.add("\"jugador_id\":"+plength(rs.getString("jugador_id"),9)+",\"duracion\":"+plength(rs.getString("duracion"),3)+",\"puntuacion\":"+plength(rs.getString("puntuacion"),3)+",\"apodo\":\""+plength(rs.getString("apodo"),10)+"\"");
                             Dbase.add("}");
                         }else{
                             Dbase.add(",{");
-                            Dbase.add("\"jugador_id\":"+rs.getString("jugador_id")+",\"duracion\":"+rs.getString("duracion")+",\"puntuacion\":"+rs.getString("puntuacion")+",\"apodo\":\""+rs.getString("apodo")+"\"");
+                            Dbase.add("\"jugador_id\":"+plength(rs.getString("jugador_id"),9)+",\"duracion\":"+plength(rs.getString("duracion"),3)+",\"puntuacion\":"+plength(rs.getString("puntuacion"),3)+",\"apodo\":\""+plength(rs.getString("apodo"),10)+"\"");
+                            //Dbase.add("\"jugador_id\":"+rs.getString("jugador_id")+",\"duracion\":"+rs.getString("duracion")+",\"puntuacion\":"+rs.getString("puntuacion")+",\"apodo\":\""+rs.getString("apodo")+"\"");
                             Dbase.add("}");
                         }
                     }
@@ -48,5 +49,16 @@ public class ConsultarPuntuaciones {
     return Dbase ;
     }
     
+    public String plength(String txt, int length){
+        if (txt.length()< length){
+            while(true){
+                txt+=" ";
+                if (txt.length()<length){break;}   
+            }
+            return txt;
+        }else{
+            return txt.substring(0, length);
+        }
+    }
     
 }

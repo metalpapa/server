@@ -38,7 +38,7 @@ public class DAO_Partida {
 
     public void actualizar(){
         Connection con=new Conexion().getConnection(); 
-        String insertString1 = "UPDATE partida SET duracion="+partida.getDuracion()+",terminada="+partida.getTerminada() +",completa="+partida.getCompletada()+" WHERE partida_id="+partida.getPartida_id();
+        String insertString1 = "UPDATE partida SET duracion="+partida.getDuracion()+",terminada="+partida.getTerminada() +",completa="+partida.getCompletada()+",puntuacion="+partida.getPuntuacion()+" WHERE partida_id="+partida.getPartida_id();
         System.out.println(insertString1);
         try {
                 Statement stmt = con.createStatement();
