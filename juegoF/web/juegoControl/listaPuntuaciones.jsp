@@ -10,7 +10,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-            ConsultarPuntuaciones p=new ConsultarPuntuaciones();
+            String nivel=request.getParameter("nivel");
+            
+            ConsultarPuntuaciones p=new ConsultarPuntuaciones(nivel);
             List<String> list=p.partidas();
 
             out.write("{");

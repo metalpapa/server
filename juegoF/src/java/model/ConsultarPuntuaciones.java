@@ -18,14 +18,16 @@ import java.util.List;
 import model.Conexion;
 
 public class ConsultarPuntuaciones {
+    String nivel;
 
-    public ConsultarPuntuaciones() {
-    }  
-   
+    public ConsultarPuntuaciones(String nivel) {
+        this.nivel = nivel;
+    }
+    
     public List<String> partidas(){
                 Connection con=new Conexion().getConnection(); 
                 List<String> Dbase = new ArrayList<String>();
-               	String selectString = "";
+               	String selectString = "select j.jugador_id, p.duracion, p.puntuacion, j.apodo from jugador j, partida p, juego g where j.jugador_id=g.jugador_id and g.partida_id=p.partida_id and p.nivel='"+nivel+"' order by p.puntuacion desc, duracion limit 15 ;";
                 try {
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery(selectString);
