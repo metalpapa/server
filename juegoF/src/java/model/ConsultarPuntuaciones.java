@@ -25,7 +25,7 @@ public class ConsultarPuntuaciones {
     public List<String> partidas(){
                 Connection con=new Conexion().getConnection(); 
                 List<String> Dbase = new ArrayList<String>();
-               	String selectString = "select j.jugador_id, p.duracion, p.puntuacion, j.apodo from jugador j, partida p, juego g where j.jugador_id=g.jugador_id and g.partida_id=p.partida_id order by p.puntuacion  desc limit 15 ;";
+               	String selectString = "";
                 try {
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery(selectString);
@@ -33,12 +33,10 @@ public class ConsultarPuntuaciones {
                         if (Dbase.isEmpty()){
                             Dbase.add("{");
                             Dbase.add("\"jugador_id\":\""+rs.getString("jugador_id")+"\",\"duracion\":\""+rs.getString("duracion")+"\",\"puntuacion\":\""+rs.getString("puntuacion")+"\",\"apodo\":\""+rs.getString("apodo")+"\"");                
-                            //Dbase.add("\"jugador_id\":"+rs.getString("jugador_id")+",\"duracion\":"+rs.getString("duracion")+",\"puntuacion\":"+rs.getString("puntuacion")+",\"apodo\":\""+rs.getString("apodo")+"\"");
                             Dbase.add("}");
                         }else{
                             Dbase.add(",{");
                             Dbase.add("\"jugador_id\":\""+rs.getString("jugador_id")+"\",\"duracion\":\""+rs.getString("duracion")+"\",\"puntuacion\":\""+rs.getString("puntuacion")+"\",\"apodo\":\""+rs.getString("apodo")+"\"");                
-                            //Dbase.add("\"jugador_id\":"+rs.getString("jugador_id")+",\"duracion\":"+rs.getString("duracion")+",\"puntuacion\":"+rs.getString("puntuacion")+",\"apodo\":\""+rs.getString("apodo")+"\"");
                             Dbase.add("}");
                         }
                     }
