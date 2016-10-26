@@ -11,7 +11,7 @@
 
 <%
             String nivel=request.getParameter("nivel");
-            
+            System.out.println(nivel);
             ConsultarPuntuaciones p=new ConsultarPuntuaciones(nivel);
             List<String> list=p.partidas();
 
