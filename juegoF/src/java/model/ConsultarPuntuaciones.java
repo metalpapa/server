@@ -28,6 +28,7 @@ public class ConsultarPuntuaciones {
                 Connection con=new Conexion().getConnection(); 
                 List<String> Dbase = new ArrayList<String>();
                	String selectString = "select j.jugador_id, p.duracion, p.puntuacion, j.apodo from jugador j, partida p, juego g where j.jugador_id=g.jugador_id and g.partida_id=p.partida_id and p.nivel='"+nivel+"' order by p.puntuacion desc, duracion limit 15 ;";
+                System.out.println(selectString);
                 try {
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery(selectString);
