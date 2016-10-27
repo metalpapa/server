@@ -22,13 +22,9 @@
                
                
                //if completada llega en undefined -2
-               if (!completada.equals("1")|| !completada.equals("0"))
-               {
-                   completada="2";
-               }
                if (completada.equals("undefined"))
                {
-                   completada="3";
+                   completada="2";
                }
                
                Vo_Partida partida=new Vo_Partida(partida_id, nivel,tiempo,"1",completada,puntuacion);
