@@ -20,6 +20,13 @@
                String puntuacion=request.getParameter("puntuacion");
                String completada=request.getParameter("completada");
                
+               
+               //if completada llega en undefined -2
+               if (completada.equals("undefined"))
+               {
+                   completada="2";
+               }
+               
                Vo_Partida partida=new Vo_Partida(partida_id, nivel,tiempo,"1",completada,puntuacion);
                new DAO_Partida(partida).actualizar();
                
