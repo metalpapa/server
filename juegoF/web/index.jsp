@@ -21,7 +21,7 @@ and open the template in the editor.
         
         <div id="principal">
            <!--<iframe  src="juego/index.html" width="1024" height="768" ></iframe> -->
-           En mantencion
+           En mantencion, por el dia viernes 28. Gracias.....
         </div>
         
         
