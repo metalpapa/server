@@ -30,7 +30,7 @@ and open the template in the editor.
         <footer id="footer">
 			<div class="footer">
             <p  >&copy; Creditos: 
-                <a href="http://www.freesound.org/people/djgriffin/">Musica por djgriffin </a> &nbsp<a href="http://nailbuster.com/">Nailbuster GUI Widget Library  </a>
+                <!--<a href="http://www.freesound.org/people/djgriffin/">Musica por djgriffin </a> &nbsp<a href="http://nailbuster.com/">Nailbuster GUI Widget Library  </a>-->
             </p>
         		</div>
         </footer>
