@@ -15,15 +15,16 @@ and open the template in the editor.
         <title>Juego de piezas irregulares </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/estilo.css" rel="stylesheet" type="text/css">
+        <!--<link href="css/estilo.css" rel="stylesheet" type="text/css">-->
     </head>
     <body >
         
         <div id="principal">
-           <iframe  src="juego/index.html" width="1024" height="768" ></iframe> 
+           <!--<iframe  src="juego/index.html" width="1024" height="768" ></iframe> -->
+           En mantencion
         </div>
         
-        http://nailbuster.com/
+        
         
           <!-- Footer -->
         <footer id="footer">
