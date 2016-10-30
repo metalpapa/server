@@ -15,7 +15,7 @@ and open the template in the editor.
         <title>Juego de piezas irregulares </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link href="css/estilo.css" rel="stylesheet" type="text/css">-->
+        <link href="css/estilo.css" rel="stylesheet" type="text/css">
     </head>
     <body >
         
