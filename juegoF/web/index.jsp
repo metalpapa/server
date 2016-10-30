@@ -20,8 +20,8 @@ and open the template in the editor.
     <body >
         
         <div id="principal">
-           <!--<iframe  src="juego/index.html" width="1024" height="768" ></iframe> -->
-           En mantencion, por el dia viernes 28. Gracias.....
+           <iframe  src="juego/index.html" width="1024" height="768" ></iframe> 
+          
         </div>
         
         
@@ -30,7 +30,7 @@ and open the template in the editor.
         <footer id="footer">
 			<div class="footer">
             <p  >&copy; Creditos: 
-                <!--<a href="http://www.freesound.org/people/djgriffin/">Musica por djgriffin </a> &nbsp<a href="http://nailbuster.com/">Nailbuster GUI Widget Library  </a>-->
+                <<a href="http://www.freesound.org/people/djgriffin/">Musica por djgriffin </a> &nbsp<a href="http://nailbuster.com/">Nailbuster GUI Widget Library  </a>
             </p>
         		</div>
         </footer>
