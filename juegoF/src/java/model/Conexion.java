@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class Conexion {
   
     private static String user="app", password = "mujer_amante";
-    private static String connectString = "jdbc:mysql://localhost/juego?user="+user+"&password="+password+"&autoReconnect=true&useSSL=false";
+    private static String connectString = "jdbc:mysql://localhost/juego?user="+user+"&password="+password;// &autoReconnect=true&useSSL=false";
              
     static Connection con=null;
 
