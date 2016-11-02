@@ -15,7 +15,7 @@
               
                
                String jugador_id=request.getParameter("jugador_id");
-               String genero=request.getParameter("genero");
+               String genero=request.getParameter("genero").trim();
                String edad=request.getParameter("edad");
                String apodo=request.getParameter("apodo").trim();
                
