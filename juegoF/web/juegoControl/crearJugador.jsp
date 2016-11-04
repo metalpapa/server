@@ -23,6 +23,9 @@
                apodo=request.getParameter("apodo").trim().toString();
                
               }catch(NullPointerException e){
+                  jugador_id=request.getParameter("jugador_id");
+                  genero=request.getParameter("genero").trim();
+                  edad=request.getParameter("edad");
                   apodo="unknown";
               }
                
