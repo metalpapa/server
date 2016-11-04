@@ -17,7 +17,7 @@
                String jugador_id=request.getParameter("jugador_id");
                String genero=request.getParameter("genero").trim();
                String edad=request.getParameter("edad");
-               String apodo=request.getParameter("apodo").trim();
+               String apodo=request.getParameter("apodo").trim().toString();
                
                Vo_Jugador jugador =new Vo_Jugador(jugador_id,genero,edad,apodo);
                new DAO_Jugador(jugador).ingresar();
