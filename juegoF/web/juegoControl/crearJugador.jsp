@@ -20,7 +20,7 @@
                jugador_id=request.getParameter("jugador_id");
                genero=request.getParameter("genero").trim();
                edad=request.getParameter("edad");
-               apodo=request.getParameter("apodo").trim().toString();
+               apodo=request.getParameter("apodo").trim();
                
               }catch(NullPointerException e){
                   jugador_id=request.getParameter("jugador_id");
