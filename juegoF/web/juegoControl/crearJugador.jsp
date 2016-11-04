@@ -12,12 +12,19 @@
 <%@ page import="java.text.SimpleDateFormat"%>
 
          <%
-              
+              String apodo;
+              String edad;
+              String genero;
+              String jugador_id;
+              try{ 
+               jugador_id=request.getParameter("jugador_id");
+               genero=request.getParameter("genero").trim();
+               edad=request.getParameter("edad");
+               apodo=request.getParameter("apodo").trim().toString();
                
-               String jugador_id=request.getParameter("jugador_id");
-               String genero=request.getParameter("genero").trim();
-               String edad=request.getParameter("edad");
-               String apodo=request.getParameter("apodo").trim().toString();
+              }catch(NullPointerException e){
+                  apodo="unknown";
+              }
                
                Vo_Jugador jugador =new Vo_Jugador(jugador_id,genero,edad,apodo);
                new DAO_Jugador(jugador).ingresar();
