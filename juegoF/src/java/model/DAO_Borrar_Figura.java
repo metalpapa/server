@@ -34,8 +34,7 @@ public class DAO_Borrar_Figura {
           
         } catch(SQLException ex) {
                 System.err.println("SQLException_delete_DAO_Borrar_Figura: " + ex.getMessage());
-        }
-        
+        }  
     }  
     
 }

@@ -29,8 +29,11 @@ and open the template in the editor.
           <!-- Footer -->
         <footer id="footer">
 			<div class="footer">
+            <p >
+                &nbsp Informame de algun error o bug a: c.santelicesmuoz@uandresbello.edu 
+            </p>
             <p  >&copy; Creditos: 
-                &nbsp<a href="http://nailbuster.com/">Nailbuster GUI Widget Library  </a>
+                &nbsp<a href="http://nailbuster.com/">Nailbuster GUI Widget Library  </a> 
             </p>
         		</div>
         </footer>
