@@ -7,7 +7,7 @@ import java.sql.*;
 
 public class Conexion {
   
-    private static String user="app", password = "mujer_amante";
+    private static String user="app", password = "mysql_server-12345";
     private static String connectString = "jdbc:mysql://localhost/juego?user="+user+"&password="+password+"&useSSL=false";// &autoReconnect=true&useSSL=false";
              
     static Connection con=null;
