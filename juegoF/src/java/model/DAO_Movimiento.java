@@ -37,7 +37,6 @@ public class DAO_Movimiento {
         finally {
             try {
                 con.close();
-                System.err.println("SHOLA CLOSE");
             } catch (SQLException e) { /* ignored */}
         }
     }   
