@@ -43,10 +43,16 @@ public class ConsultarPuntuaciones {
                         }
                     }
                         stmt.close();
-			con.close();
-		} catch(SQLException ex) {
-			System.err.println("SQLException: " + ex.getMessage());
-		}
+			//con.close();
+          
+                } catch(SQLException ex) {
+                        System.err.println("SQLException_delete_DAO_Borrar_Figura: " + ex.getMessage());
+                }  
+                finally {
+                    try {
+                        con.close();
+                    } catch (SQLException e) { /* ignored */}
+                }
     return Dbase ;
     }
     

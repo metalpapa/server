@@ -44,10 +44,15 @@ public class DAO_Partida {
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(insertString1);
                 stmt.close();
-                con.close();
+       	//con.close();
           
         } catch(SQLException ex) {
-                System.err.println("SQLException_update_DAO_Partida" + ex.getMessage());
+                System.err.println("SQLException_delete_DAO_Borrar_Figura: " + ex.getMessage());
+        }  
+        finally {
+            try {
+                con.close();
+            } catch (SQLException e) { /* ignored */}
         }
     } 
 }
