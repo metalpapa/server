@@ -31,16 +31,11 @@ public class DAO_Juego {
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(insertString1);
                 stmt.close();
-		//con.close();
+		con.close();
           
         } catch(SQLException ex) {
-                System.err.println("SQLException_delete_DAO_Borrar_Figura: " + ex.getMessage());
+                System.err.println("SQLException_DAO_Juego_Ingresar: " + ex.getMessage());
         }  
-        finally {
-            try {
-                con.close();
-            } catch (SQLException e) { /* ignored */}
-        }
         
     }     
 }

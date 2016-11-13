@@ -46,7 +46,7 @@ public class ConsultarPuntuaciones {
 			//con.close();
           
                 } catch(SQLException ex) {
-                        System.err.println("SQLException_delete_DAO_Borrar_Figura: " + ex.getMessage());
+                        System.err.println("SQLException_ConsultarPuntuaciones_Partidas " + ex.getMessage());
                 }  
                 finally {
                     try {

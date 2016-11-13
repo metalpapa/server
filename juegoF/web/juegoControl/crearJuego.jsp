@@ -17,19 +17,26 @@
          <%
               
               String apodo;
-              String genero=request.getParameter("genero").trim();
+              String genero=request.getParameter("genero");
               String edad=request.getParameter("edad");
               String jugador_id=request.getParameter("jugador_id");
               String partida_id=request.getParameter("partida_id");   
               String nivel=request.getParameter("nivel");
               
+              if (edad==null){
+                  edad="10";
+              }
+              if (genero==null){
+                  genero="Hombre";
+              }
               try{ 
                  apodo=request.getParameter("apodo").trim();
-              }catch(NullPointerException e){              
+              }catch(Exception e){              
                  apodo="unknown";
               }
               
               try{
+                  
                Vo_Jugador jugador =new Vo_Jugador(jugador_id,genero,edad,apodo);
                new DAO_Jugador(jugador).ingresar();   
                   
@@ -41,5 +48,6 @@
               }catch(NullPointerException e){      
                   System.out.println("Error en crearJuego.jsp:"+e.toString());
                }
-     
+
+
         %>

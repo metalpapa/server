@@ -21,7 +21,6 @@ public class DAO_Borrar_Figura {
         this.figura_id = figura_id;
     }
   
-    
     public void borrar(){
         Connection con=new Conexion().getConnection(); 
         String insertString1 = "delete from movimientos where partida_id="+partida_id+" and figura_id="+figura_id;
@@ -30,16 +29,11 @@ public class DAO_Borrar_Figura {
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(insertString1);
                 stmt.close();
-		//con.close();
+		con.close();
           
         } catch(SQLException ex) {
-                System.err.println("SQLException_delete_DAO_Borrar_Figura: " + ex.getMessage());
+                System.err.println("SQLException_DAO_Borrar_Figura: " + ex.getMessage());
         }  
-        finally {
-            try {
-                con.close();
-            } catch (SQLException e) { /* ignored */}
-        }
     
     }  
     
